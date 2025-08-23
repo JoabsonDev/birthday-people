@@ -1,0 +1,61 @@
+/* ===== Reset Mobile Friendly ===== */
+
+/* Remove tap highlight (iOS / Android) */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* evita menu de copiar no iOS */
+}
+
+/* Suaviza a rolagem no iOS */
+html {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Remove margens/paddings padrão e garante box-sizing consistente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajusta fontes em mobile */
+html,
+body {
+  -webkit-text-size-adjust: 100%; /* evita zoom automático no iOS */
+  font-family: system-ui, sans-serif;
+
+  height: 100%;
+}
+
+/* Remove borda azul ao tocar em inputs/botões no mobile */
+input,
+textarea,
+button,
+select,
+a {
+  outline: none;
+}
+
+/* Melhora acessibilidade visual em foco via teclado */
+:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-offset: 2px;
+}
+
+/* Evita zoom no duplo clique em iOS */
+body {
+  touch-action: manipulation;
+}
+
+/* Seleção de texto mais suave */
+::selection {
+  background: rgba(37, 99, 235, 0.2); /* azul clarinho */
+}
+
+/* Ajuste do tamanho do swiper */
+main.swiper {
+  height: calc(100% - 60px);
+}

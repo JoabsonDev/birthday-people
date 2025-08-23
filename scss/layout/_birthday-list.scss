@@ -1,0 +1,35 @@
+$class: ".birthday-list";
+
+#{$class} {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+
+  &__item {
+    display: grid;
+    grid-template-areas:
+      "name group actions"
+      "date . actions";
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .name {
+    grid-area: name;
+    font-weight: bold;
+    color: #333;
+  }
+  .group {
+    grid-area: group;
+    color: #666;
+  }
+  .actions {
+    grid-area: actions;
+  }
+  .date {
+    grid-area: date;
+    color: #999;
+  }
+}

@@ -8,23 +8,46 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/main.js" type="module" defer></script>
   </head>
   <body>
+    <header>meu cabeçalho</header>
     <main class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Página Home</div>
-        <div class="swiper-slide">Página Contatos</div>
-        <div class="swiper-slide">Página Configurações</div>
+        <div class="swiper-slide">Destaque</div>
+        <div class="swiper-slide">
+          <ul class="birthday-list">
+            <li class="birthday-list__item">
+              <span class="name">Joabson</span>
+              <span class="date">01/01/01</span>
+              <span class="group">Jovens</span>
+              <div>
+                <button
+                  class="edit fa-solid fa-pencil"
+                  aria-label="Editar"
+                ></button>
+                <button
+                  class="delete fa-solid fa-trash"
+                  aria-label="Excluir"
+                ></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">Configurações</div>
       </div>
     </main>
 
     <nav class="bottom-navigation">
-      <button data-index="0" class="active">Home</button>
-      <button data-index="1">Contatos</button>
-      <button data-index="2">Config</button>
+      <button data-index="0">Destaque</button>
+      <button data-index="1" class="active">Início</button>
+      <button data-index="2">Configurações</button>
     </nav>
   </body>
 </html>

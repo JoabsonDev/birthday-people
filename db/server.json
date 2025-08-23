@@ -1,0 +1,19 @@
+{
+  "birthdays": [
+    {
+      "id": "da935c42-dbb6-42ac-91cc-87f1c8c3b2eb",
+      "name": "Joabson Silva",
+      "email": "joabson@gmail.com",
+      "birthday": "1988-06-10T00:00:00.000Z",
+      "admin": true,
+      "group": "family"
+    },
+    {
+      "id": "b1c2d3e4-f5a6-7b8c-9d0e-f1a2b3c4d5e6",
+      "name": "Maria Oliveira",
+      "email": "maria@gmail.com",
+      "birthday": "1990-08-15T00:00:00.000Z",
+      "admin": false
+    }
+  ]
+}
