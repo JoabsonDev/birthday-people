@@ -1,0 +1,78 @@
+$class: ".l-header";
+
+#{$class} {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 99;
+  transition: 0.3s;
+
+  &__action {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__username {
+    font-size: 16px;
+    font-weight: 600;
+    color: #364153;
+  }
+  &__search {
+    margin-left: auto;
+    border-radius: 16px;
+    padding: 4px;
+    padding-left: 6px;
+    display: flex;
+    outline: #cccccc auto 1px;
+
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+      -webkit-appearance: none; /* Chrome, Safari */
+      -moz-appearance: textfield; /* Firefox */
+      appearance: none;
+      max-width: 0px;
+      transition: 0.3s;
+
+      /* Remove o "X" de limpar no Chrome/Safari */
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+    }
+
+    &:has(input:focus-visible),
+    &:has(input:not(:placeholder-shown)) {
+      outline-color: -webkit-focus-ring-color;
+
+      input {
+        padding-left: 4px;
+        max-width: 100px;
+      }
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &--scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

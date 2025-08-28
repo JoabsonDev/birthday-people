@@ -58,8 +58,14 @@ body {
 /* Ajuste do tamanho do swiper */
 main.swiper {
   height: calc(100% - 60px);
+  margin-top: 84px;
 }
 
 button {
   font-family: inherit;
+}
+
+/* Tamanho de font default ph-duotone */
+*.ph-duotone {
+  font-size: 22px;
 }

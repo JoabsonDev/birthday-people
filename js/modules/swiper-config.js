@@ -6,7 +6,7 @@ const swiper = new Swiper(".swiper", {
   initialSlide: 1,
 });
 
-const buttons = document.querySelectorAll(".bottom-navigation__item");
+const buttons = document.querySelectorAll(".c-bottom-navigation__item");
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -15,9 +15,21 @@ buttons.forEach((btn) => {
   });
 });
 
-swiper.on("slideChange", () => {
+swiper.on("slideChange", ({ activeIndex }) => {
+  if (activeIndex === 1) {
+    document
+      .querySelector(".l-header__search")
+      .classList.remove("l-header__search--hidden");
+  } else {
+    document
+      .querySelector(".l-header__search")
+      .classList.add("l-header__search--hidden");
+  }
+
   buttons.forEach((btn) =>
-    btn.classList.remove("bottom-navigation__item--active")
+    btn.classList.remove("c-bottom-navigation__item--active")
   );
-  buttons[swiper.activeIndex].classList.add("bottom-navigation__item--active");
+  buttons[swiper.activeIndex].classList.add(
+    "c-bottom-navigation__item--active"
+  );
 });
