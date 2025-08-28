@@ -4,13 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aniversariantes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+    <!-- https://phosphoricons.com/?weight=duotone -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css"
     />
 
     <link rel="stylesheet" href="./css/style.css" />
@@ -24,16 +35,22 @@
         <div class="swiper-slide">
           <ul class="birthday-list">
             <li class="birthday-list__item">
-              <span class="name">Joabson</span>
-              <span class="date">01/01/01</span>
-              <span class="group">Jovens</span>
-              <div>
+              <span class="name">
+                <strong>Nome:</strong>
+                Joabson
+              </span>
+              <span class="date"> <strong>Nascimento:</strong> 01/01/01 </span>
+              <span class="group">
+                <strong>Grupo:</strong>
+                Jovens
+              </span>
+              <div class="actions">
                 <button
-                  class="edit fa-solid fa-pencil"
+                  class="edit ph-duotone ph-pencil"
                   aria-label="Editar"
                 ></button>
                 <button
-                  class="delete fa-solid fa-trash"
+                  class="delete ph-duotone ph-trash"
                   aria-label="Excluir"
                 ></button>
               </div>
@@ -45,9 +62,21 @@
     </main>
 
     <nav class="bottom-navigation">
-      <button data-index="0">Destaque</button>
-      <button data-index="1" class="active">Início</button>
-      <button data-index="2">Configurações</button>
+      <button data-index="0" class="bottom-navigation__item">
+        <i class="ph-duotone ph-star"></i>
+        <span>Destaque</span>
+      </button>
+      <button
+        data-index="1"
+        class="bottom-navigation__item bottom-navigation__item--active"
+      >
+        <i class="ph-duotone ph-house"></i>
+        <span>Início</span>
+      </button>
+      <button data-index="2" class="bottom-navigation__item">
+        <i class="ph-duotone ph-gear"></i>
+        <span>Configurações</span>
+      </button>
     </nav>
   </body>
 </html>

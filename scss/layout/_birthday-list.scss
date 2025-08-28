@@ -18,18 +18,19 @@ $class: ".birthday-list";
 
   .name {
     grid-area: name;
-    font-weight: bold;
-    color: #333;
-  }
-  .group {
-    grid-area: group;
-    color: #666;
-  }
-  .actions {
-    grid-area: actions;
   }
   .date {
     grid-area: date;
-    color: #999;
+  }
+  .group {
+    grid-area: group;
+  }
+  .actions {
+    grid-area: actions;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
 }
