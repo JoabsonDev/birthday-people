@@ -33,7 +33,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">Destaque</div>
         <div class="swiper-slide">
-          <ul class="birthday-list">
+          <!-- <ul class="birthday-list">
             <li class="birthday-list__item">
               <span class="name">
                 <strong>Nome:</strong>
@@ -55,7 +55,69 @@
                 ></button>
               </div>
             </li>
-          </ul>
+          </ul> -->
+
+          <table aria-describedby="table-description" class="birthday-table">
+            <caption id="table-description">
+              Tabela com os nomes, datas de nascimento, grupos e ações
+              disponíveis.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Nascimento</th>
+                <th scope="col">Grupo</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row">
+                <td role="cell">João Silva</td>
+                <td role="cell">10/06/1988</td>
+                <td role="cell">Louvor</td>
+                <td role="cell" class="acoes">
+                  <button
+                    class="edit ph-duotone ph-pencil"
+                    aria-label="Editar"
+                  ></button>
+                  <button
+                    class="delete ph-duotone ph-trash"
+                    aria-label="Excluir"
+                  ></button>
+                </td>
+              </tr>
+              <tr role="row">
+                <td role="cell">Maria Souza</td>
+                <td role="cell">22/11/1992</td>
+                <td role="cell">Intercessão</td>
+                <td role="cell" class="acoes">
+                  <button
+                    class="edit ph-duotone ph-pencil"
+                    aria-label="Editar"
+                  ></button>
+                  <button
+                    class="delete ph-duotone ph-trash"
+                    aria-label="Excluir"
+                  ></button>
+                </td>
+              </tr>
+              <tr role="row">
+                <td role="cell">Carlos Lima</td>
+                <td role="cell">05/01/1995</td>
+                <td role="cell">Apoio</td>
+                <td role="cell" class="acoes">
+                  <button
+                    class="edit ph-duotone ph-pencil"
+                    aria-label="Editar"
+                  ></button>
+                  <button
+                    class="delete ph-duotone ph-trash"
+                    aria-label="Excluir"
+                  ></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="swiper-slide">Configurações</div>
       </div>
@@ -74,8 +136,8 @@
         <span>Início</span>
       </button>
       <button data-index="2" class="bottom-navigation__item">
-        <i class="ph-duotone ph-gear"></i>
-        <span>Configurações</span>
+        <i class="ph-duotone ph-user-circle"></i>
+        <span>Conta</span>
       </button>
     </nav>
   </body>

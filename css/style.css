@@ -127,42 +127,31 @@ button {
 .bottom-navigation__item--active i.ph-house::before {
   color: #1e90ff;
 }
-.bottom-navigation__item--active i.ph-gear::before {
+.bottom-navigation__item--active i.ph-user-circle::before {
   color: #32cd32;
 }
 .bottom-navigation__item--active i::after {
   color: #0e276e;
 }
 
-.birthday-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
+.birthday-table {
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
-.birthday-list__item {
-  display: grid;
-  grid-template-areas: "name group actions" "date . actions";
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 8px;
+.birthday-table caption {
+  opacity: 0;
+  position: absolute;
 }
-.birthday-list .name {
-  grid-area: name;
+.birthday-table thead th {
+  position: sticky;
+  top: 0;
 }
-.birthday-list .date {
-  grid-area: date;
+.birthday-table tbody tr {
+  border-top: 1px solid black;
 }
-.birthday-list .group {
-  grid-area: group;
-}
-.birthday-list .actions {
-  grid-area: actions;
-  grid-row: 1/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+.birthday-table tbody tr td {
+  padding-block: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
