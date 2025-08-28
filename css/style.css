@@ -57,15 +57,21 @@ body {
 /* Ajuste do tamanho do swiper */
 main.swiper {
   height: calc(100% - 60px);
+  margin-top: 84px;
 }
 
 button {
   font-family: inherit;
 }
 
-.bottom-navigation {
+/* Tamanho de font default ph-duotone */
+*.ph-duotone {
+  font-size: 22px;
+}
+
+.c-bottom-navigation {
   position: fixed;
-  inset: auto 10px 10px;
+  inset: auto 16px 16px;
   display: flex;
   background: #fff;
   z-index: 1000;
@@ -75,7 +81,7 @@ button {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
-.bottom-navigation__item {
+.c-bottom-navigation__item {
   flex: 1;
   border: none;
   background: none;
@@ -88,70 +94,143 @@ button {
   cursor: pointer;
   overflow: hidden;
 }
-.bottom-navigation__item i,
-.bottom-navigation__item span {
+.c-bottom-navigation__item i,
+.c-bottom-navigation__item span {
   transition: 0.3s;
   translate: 0 24px;
 }
-.bottom-navigation__item i {
-  font-size: 22px;
+.c-bottom-navigation__item i {
   margin-bottom: 4px;
   translate: 0 8px;
   color: #ccc;
 }
-.bottom-navigation__item i::before {
+.c-bottom-navigation__item i::before {
   transition: inherit;
 }
-.bottom-navigation__item i::after {
+.c-bottom-navigation__item i::after {
   color: #808080;
 }
-.bottom-navigation__item span {
+.c-bottom-navigation__item span {
   color: #0e276e;
 }
-.bottom-navigation__item--active {
+.c-bottom-navigation__item--active {
   font-weight: bold;
 }
-.bottom-navigation__item--active i,
-.bottom-navigation__item--active span {
+.c-bottom-navigation__item--active i,
+.c-bottom-navigation__item--active span {
   translate: initial;
 }
-.bottom-navigation__item--active i {
+.c-bottom-navigation__item--active i {
   color: inherit;
 }
-.bottom-navigation__item--active i.ph-duotone::before {
+.c-bottom-navigation__item--active i.ph-duotone::before {
   opacity: 1;
 }
-.bottom-navigation__item--active i.ph-star::before {
+.c-bottom-navigation__item--active i.ph-star::before {
   color: gold;
 }
-.bottom-navigation__item--active i.ph-house::before {
+.c-bottom-navigation__item--active i.ph-house::before {
   color: #1e90ff;
 }
-.bottom-navigation__item--active i.ph-user-circle::before {
+.c-bottom-navigation__item--active i.ph-user-circle::before {
   color: #32cd32;
 }
-.bottom-navigation__item--active i::after {
+.c-bottom-navigation__item--active i::after {
   color: #0e276e;
 }
 
-.birthday-table {
+.l-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.l-birthday-table {
   width: 100%;
   position: relative;
   text-align: center;
 }
-.birthday-table caption {
+.l-birthday-table caption {
   opacity: 0;
   position: absolute;
 }
-.birthday-table thead th {
+.l-birthday-table thead th {
   position: sticky;
   top: 0;
 }
-.birthday-table tbody tr {
+.l-birthday-table tbody tr {
   border-top: 1px solid black;
 }
-.birthday-table tbody tr td {
+.l-birthday-table tbody tr td {
   padding-block: 12px;
+}
+
+.l-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 99;
+  transition: 0.3s;
+}
+.l-header__action {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+.l-header__action img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.l-header__username {
+  font-size: 16px;
+  font-weight: 600;
+  color: #364153;
+}
+.l-header__search {
+  margin-left: auto;
+  border-radius: 16px;
+  padding: 4px;
+  padding-left: 6px;
+  display: flex;
+  outline: #cccccc auto 1px;
+}
+.l-header__search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-appearance: none; /* Chrome, Safari */
+  -moz-appearance: textfield; /* Firefox */
+  appearance: none;
+  max-width: 0px;
+  transition: 0.3s;
+  /* Remove o "X" de limpar no Chrome/Safari */
+}
+.l-header__search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.l-header__search:has(input:focus-visible), .l-header__search:has(input:not(:placeholder-shown)) {
+  outline-color: -webkit-focus-ring-color;
+}
+.l-header__search:has(input:focus-visible) input, .l-header__search:has(input:not(:placeholder-shown)) input {
+  padding-left: 4px;
+  max-width: 100px;
+}
+.l-header__search--hidden {
+  display: none;
+}
+.l-header--scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=style.css.map */

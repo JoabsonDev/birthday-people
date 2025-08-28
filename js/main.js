@@ -1,3 +1,4 @@
+import "./modules/header.js";
 import "./modules/swiper-config.js";
 
 // const baseUrl = "http://localhost:3000";
