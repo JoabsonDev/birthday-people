@@ -25,7 +25,7 @@ html {
 html,
 body {
   -webkit-text-size-adjust: 100%; /* evita zoom automático no iOS */
-  font-family: system-ui, sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100%;
 }
 
@@ -59,18 +59,23 @@ main.swiper {
   height: calc(100% - 60px);
 }
 
+button {
+  font-family: inherit;
+}
+
 .bottom-navigation {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  inset: auto 10px 10px;
   display: flex;
   background: #fff;
-  border-top: 1px solid #ccc;
   z-index: 1000;
   height: 60px;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
-.bottom-navigation button {
+.bottom-navigation__item {
   flex: 1;
   border: none;
   background: none;
@@ -78,49 +83,75 @@ main.swiper {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  color: #666;
+  font-size: 14px;
+  color: #000;
   cursor: pointer;
+  overflow: hidden;
 }
-.bottom-navigation button.active {
-  color: #0d9488;
+.bottom-navigation__item i,
+.bottom-navigation__item span {
+  transition: 0.3s;
+  translate: 0 24px;
+}
+.bottom-navigation__item i {
+  font-size: 22px;
+  margin-bottom: 4px;
+  translate: 0 8px;
+  color: #ccc;
+}
+.bottom-navigation__item i::before {
+  transition: inherit;
+}
+.bottom-navigation__item i::after {
+  color: #808080;
+}
+.bottom-navigation__item span {
+  color: #0e276e;
+}
+.bottom-navigation__item--active {
   font-weight: bold;
 }
-.bottom-navigation button svg {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 3px;
-  fill: currentColor;
+.bottom-navigation__item--active i,
+.bottom-navigation__item--active span {
+  translate: initial;
+}
+.bottom-navigation__item--active i {
+  color: inherit;
+}
+.bottom-navigation__item--active i.ph-duotone::before {
+  opacity: 1;
+}
+.bottom-navigation__item--active i.ph-star::before {
+  color: gold;
+}
+.bottom-navigation__item--active i.ph-house::before {
+  color: #1e90ff;
+}
+.bottom-navigation__item--active i.ph-user-circle::before {
+  color: #32cd32;
+}
+.bottom-navigation__item--active i::after {
+  color: #0e276e;
 }
 
-.birthday-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
+.birthday-table {
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
-.birthday-list__item {
-  display: grid;
-  grid-template-areas: "name group actions" "date . actions";
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 8px;
+.birthday-table caption {
+  opacity: 0;
+  position: absolute;
 }
-.birthday-list .name {
-  grid-area: name;
-  font-weight: bold;
-  color: #333;
+.birthday-table thead th {
+  position: sticky;
+  top: 0;
 }
-.birthday-list .group {
-  grid-area: group;
-  color: #666;
+.birthday-table tbody tr {
+  border-top: 1px solid black;
 }
-.birthday-list .actions {
-  grid-area: actions;
-}
-.birthday-list .date {
-  grid-area: date;
-  color: #999;
+.birthday-table tbody tr td {
+  padding-block: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

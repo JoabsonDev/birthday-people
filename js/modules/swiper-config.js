@@ -6,7 +6,7 @@ const swiper = new Swiper(".swiper", {
   initialSlide: 1,
 });
 
-const buttons = document.querySelectorAll(".bottom-navigation button");
+const buttons = document.querySelectorAll(".bottom-navigation__item");
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -16,6 +16,8 @@ buttons.forEach((btn) => {
 });
 
 swiper.on("slideChange", () => {
-  buttons.forEach((btn) => btn.classList.remove("active"));
-  buttons[swiper.activeIndex].classList.add("active");
+  buttons.forEach((btn) =>
+    btn.classList.remove("bottom-navigation__item--active")
+  );
+  buttons[swiper.activeIndex].classList.add("bottom-navigation__item--active");
 });

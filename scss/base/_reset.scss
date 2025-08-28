@@ -25,7 +25,7 @@ html {
 html,
 body {
   -webkit-text-size-adjust: 100%; /* evita zoom automático no iOS */
-  font-family: system-ui, sans-serif;
+  font-family: "Roboto", sans-serif;
 
   height: 100%;
 }
@@ -58,4 +58,8 @@ body {
 /* Ajuste do tamanho do swiper */
 main.swiper {
   height: calc(100% - 60px);
+}
+
+button {
+  font-family: inherit;
 }

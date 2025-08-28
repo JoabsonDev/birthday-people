@@ -1,35 +1,29 @@
-$class: ".birthday-list";
+$class: ".birthday-table";
 
 #{$class} {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
+  width: 100%;
+  position: relative;
+  text-align: center;
 
-  &__item {
-    display: grid;
-    grid-template-areas:
-      "name group actions"
-      "date . actions";
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 8px;
+  caption {
+    opacity: 0;
+    position: absolute;
   }
 
-  .name {
-    grid-area: name;
-    font-weight: bold;
-    color: #333;
+  thead {
+    th {
+      position: sticky;
+      top: 0;
+    }
   }
-  .group {
-    grid-area: group;
-    color: #666;
-  }
-  .actions {
-    grid-area: actions;
-  }
-  .date {
-    grid-area: date;
-    color: #999;
+
+  tbody {
+    tr {
+      border-top: 1px solid black;
+
+      td {
+        padding-block: 12px;
+      }
+    }
   }
 }
