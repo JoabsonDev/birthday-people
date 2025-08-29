@@ -205,6 +205,19 @@ button {
     padding: 10px 6px;
   }
 }
+.l-birthday-table .actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 18px;
+}
+.l-birthday-table .actions button.ph-pencil {
+  color: #1e40af;
+}
+.l-birthday-table .actions button.ph-trash {
+  color: #dc2626;
+}
 
 .l-header {
   display: flex;
