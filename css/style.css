@@ -47,6 +47,7 @@ a {
 /* Evita zoom no duplo clique em iOS */
 body {
   touch-action: manipulation;
+  padding-top: 84px;
 }
 
 /* Seleção de texto mais suave */
@@ -56,8 +57,11 @@ body {
 
 /* Ajuste do tamanho do swiper */
 main.swiper {
-  height: calc(100% - 60px);
-  margin-top: 84px;
+  height: calc(100dvh - 84px);
+}
+main.swiper .swiper-slide {
+  padding-bottom: 94px;
+  overflow-x: auto;
 }
 
 button {
@@ -147,22 +151,59 @@ button {
 
 .l-birthday-table {
   width: 100%;
-  position: relative;
-  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  color: #364153;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .l-birthday-table caption {
   opacity: 0;
   position: absolute;
 }
-.l-birthday-table thead th {
+.l-birthday-table thead {
+  background: #f9fafb;
   position: sticky;
   top: 0;
+  z-index: 10;
+}
+.l-birthday-table thead th {
+  padding: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #5f6c80;
+  background: inherit;
 }
 .l-birthday-table tbody tr {
-  border-top: 1px solid black;
+  transition: background 0.2s ease;
+}
+.l-birthday-table tbody tr:nth-child(even) {
+  background: #fdfdfd;
+}
+.l-birthday-table tbody tr:hover {
+  background: #f1f5f9;
 }
 .l-birthday-table tbody tr td {
-  padding-block: 12px;
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid #e6e8eb;
+}
+@media (max-width: 600px) {
+  .l-birthday-table {
+    font-size: 13px;
+  }
+  .l-birthday-table thead th {
+    font-size: 11px;
+    padding: 10px 6px;
+  }
+  .l-birthday-table tbody td {
+    padding: 10px 6px;
+  }
 }
 
 .l-header {
@@ -202,7 +243,8 @@ button {
   padding: 4px;
   padding-left: 6px;
   display: flex;
-  outline: #cccccc auto 1px;
+  outline: #e2e2e2 auto 1px;
+  transition: 0.3s;
 }
 .l-header__search input {
   border: none;
@@ -227,7 +269,7 @@ button {
   max-width: 100px;
 }
 .l-header__search--hidden {
-  display: none;
+  opacity: 0;
 }
 .l-header--scrolled {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
