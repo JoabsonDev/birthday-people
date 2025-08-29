@@ -6,6 +6,6 @@ import "./modules/swiper-config.js";
 const birthdayService = BirthdayService();
 
 birthdayService
-  .getBirthdayList()
+  .getBirthdayList({ page: 1, perPage: 10, search: "" })
   .then(buildHomePage)
   .catch((error) => {});
