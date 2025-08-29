@@ -1,8 +1,6 @@
 import { formatDateBr } from "./helpers/formate-date-br.js";
 
-export const buildBirthdayTable = (response) => {
-  const home = document.querySelector("#home");
-
+const buildBirthdayTable = (home, data) => {
   const birthdayListTable = document.createElement("table");
   birthdayListTable.setAttribute("aria-describedby", "table-description");
   birthdayListTable.classList.add("l-birthday-table");
@@ -24,7 +22,7 @@ export const buildBirthdayTable = (response) => {
 
   const birthdayListTableBody = document.createElement("tbody");
 
-  response.forEach(({ id, name, birthday, group }) => {
+  data.forEach(({ id, name, birthday, group }) => {
     const birthdayItem = document.createElement("tr");
     birthdayItem.setAttribute("role", "row");
     birthdayItem.innerHTML = `    
@@ -58,4 +56,9 @@ export const buildBirthdayTable = (response) => {
     birthdayListTable.appendChild(birthdayListTableBody);
     home.appendChild(birthdayListTable);
   });
+};
+
+export const buildHomePage = (response) => {
+  const home = document.querySelector("#home");
+  buildBirthdayTable(home, response.data);
 };
