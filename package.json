@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch scss/style.scss:css/style.css",
-    "sass:mini": "sass --watch scss/style.scss:css/style.css --style compressed"
+    "sass:mini": "sass --watch scss/style.scss:css/style.css --style compressed",
+    "json-server": "json-server --watch db/server.json --port 3000"
   },
   "keywords": [],
   "author": "",

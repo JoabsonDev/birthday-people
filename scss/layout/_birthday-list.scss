@@ -69,4 +69,21 @@ $class: ".l-birthday-table";
       }
     }
   }
+
+  .actions {
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      font-size: 18px;
+
+      &.ph-pencil {
+        color: #1e40af;
+      }
+      &.ph-trash {
+        color: #dc2626;
+      }
+    }
+  }
 }
