@@ -2,8 +2,14 @@ $class: ".l-birthday-table";
 
 #{$class} {
   width: 100%;
-  position: relative;
-  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  color: #364153;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
   caption {
     opacity: 0;
@@ -11,18 +17,55 @@ $class: ".l-birthday-table";
   }
 
   thead {
+    background: #f9fafb;
+    position: sticky;
+    top: 0; // 👈 aqui está o ajuste
+    z-index: 10; // maior que o conteúdo, mas menor que o header
+
     th {
-      position: sticky;
-      top: 0;
+      padding: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      color: #5f6c80;
+      background: inherit;
     }
   }
 
   tbody {
     tr {
-      border-top: 1px solid black;
+      transition: background 0.2s ease;
+
+      &:nth-child(even) {
+        background: #fdfdfd;
+      }
+
+      &:hover {
+        background: #f1f5f9;
+      }
 
       td {
-        padding-block: 12px;
+        padding: 12px;
+        text-align: center;
+        border-top: 1px solid #e6e8eb;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 13px;
+
+    thead {
+      th {
+        font-size: 11px;
+        padding: 10px 6px;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 10px 6px;
       }
     }
   }

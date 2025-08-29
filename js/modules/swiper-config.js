@@ -16,14 +16,13 @@ buttons.forEach((btn) => {
 });
 
 swiper.on("slideChange", ({ activeIndex }) => {
+  const header = document.querySelector(".l-header__search");
   if (activeIndex === 1) {
-    document
-      .querySelector(".l-header__search")
-      .classList.remove("l-header__search--hidden");
+    header.classList.remove("l-header__search--hidden");
+    header.setAttribute("aria-hidden", "false");
   } else {
-    document
-      .querySelector(".l-header__search")
-      .classList.add("l-header__search--hidden");
+    header.classList.add("l-header__search--hidden");
+    header.setAttribute("aria-hidden", "true");
   }
 
   buttons.forEach((btn) =>
