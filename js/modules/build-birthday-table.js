@@ -63,8 +63,7 @@ const buildPagination = (pagination) => {
 };
 
 export const buildHomePage = ({ data, ...pagination }) => {
-  const home = document.querySelector("#home");
-  buildBirthdayTable(home, data);
-
-  buildPagination(pagination);
+  // const home = document.querySelector("#home");
+  // buildBirthdayTable(home, data);
+  // buildPagination(pagination);
 };
