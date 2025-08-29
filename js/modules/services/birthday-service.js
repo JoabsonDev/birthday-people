@@ -3,21 +3,25 @@ const BASE_URL = "http://localhost:3000";
 async function getBirthdayList({ page = 1, perPage = 10, search = "" }) {
   const query = new URLSearchParams({
     _page: page,
-    _per_page: perPage,
-    ...(search ? { q: search } : {}),
+    _limit: perPage,
+    ...(search ? { name_like: search } : {}),
   });
 
   const res = await fetch(`${BASE_URL}/birthdays?${query.toString()}`);
-  const json = await res.json();
+  const data = await res.json();
+
+  // pega total de registros
+  const totalItems = parseInt(res.headers.get("X-Total-Count") || "0", 10);
+  const totalPages = Math.ceil(totalItems / perPage);
 
   return {
-    data: json.data,
-    page,
-    perPage,
-    totalItems: json.items?.count,
-    totalPages: json.pages?.last,
-    nextPage: json.pages?.next,
-    prevPage: json.pages?.prev,
+    data,
+    first: 1,
+    prev: page > 1 ? page - 1 : null,
+    next: page < totalPages ? page + 1 : null,
+    last: totalPages,
+    pages: totalPages,
+    items: totalItems,
   };
 }
 

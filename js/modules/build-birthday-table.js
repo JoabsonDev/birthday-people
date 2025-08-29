@@ -58,7 +58,13 @@ const buildBirthdayTable = (home, data) => {
   });
 };
 
-export const buildHomePage = (response) => {
+const buildPagination = (pagination) => {
+  console.log(pagination);
+};
+
+export const buildHomePage = ({ data, ...pagination }) => {
   const home = document.querySelector("#home");
-  buildBirthdayTable(home, response.data);
+  buildBirthdayTable(home, data);
+
+  buildPagination(pagination);
 };

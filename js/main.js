@@ -8,4 +8,6 @@ const birthdayService = BirthdayService();
 birthdayService
   .getBirthdayList({ page: 1, perPage: 10, search: "" })
   .then(buildHomePage)
-  .catch((error) => {});
+  .catch((error) => {
+    console.error(error);
+  });

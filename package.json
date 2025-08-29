@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "live-server": "npx live-server",
+    "json-server": "npx json-server db.json",
     "sass": "sass --watch scss/style.scss:css/style.css",
-    "sass:mini": "sass --watch scss/style.scss:css/style.css --style compressed",
-    "json-server": "json-server --watch db/server.json --port 3000"
+    "sass:mini": "sass --watch scss/style.scss:css/style.css --style compressed"
   },
   "keywords": [],
   "author": "",
