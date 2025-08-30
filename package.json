@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "live-server": "npx live-server",
+    "json-server": "npx json-server db.json",
     "sass": "sass --watch scss/style.scss:css/style.css",
     "sass:mini": "sass --watch scss/style.scss:css/style.css --style compressed"
   },

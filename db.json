@@ -1,0 +1,306 @@
+{
+  "birthdays": [
+    {
+      "id": "da935c42-dbb6-42ac-91cc-87f1c8c3b2eb",
+      "name": "Joabson Silva",
+      "email": "joabson@gmail.com",
+      "birthday": "1988-06-10T00:00:00.000Z",
+      "admin": true,
+      "group": "family"
+    },
+    {
+      "id": "b1c2d3e4-f5a6-7b8c-9d0e-f1a2b3c4d5e6",
+      "name": "Maria Oliveira",
+      "email": "maria@gmail.com",
+      "birthday": "1990-08-15T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "a1f3e2d4-b5c6-7a8b-9c0d-1e2f3a4b5c6d",
+      "name": "Carlos Souza",
+      "email": "carlos.souza@gmail.com",
+      "birthday": "1985-02-20T00:00:00.000Z",
+      "admin": false,
+      "group": "friends"
+    },
+    {
+      "id": "f1e2d3c4-b5a6-7c8d-9e0f-1a2b3c4d5e7f",
+      "name": "Fernanda Lima",
+      "email": "fernanda.lima@gmail.com",
+      "birthday": "1992-11-05T00:00:00.000Z",
+      "admin": true,
+      "group": "work"
+    },
+    {
+      "id": "c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f",
+      "name": "Rafael Santos",
+      "email": "rafael.santos@gmail.com",
+      "birthday": "1995-04-12T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "d1e2f3a4-b5c6-7d8e-9f0a-1b2c3d4e5f6a",
+      "name": "Juliana Costa",
+      "email": "juliana.costa@gmail.com",
+      "birthday": "1987-07-30T00:00:00.000Z",
+      "admin": true,
+      "group": "family"
+    },
+    {
+      "id": "e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b",
+      "name": "Bruno Almeida",
+      "email": "bruno.almeida@gmail.com",
+      "birthday": "1993-01-18T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c",
+      "name": "Patrícia Mendes",
+      "email": "patricia.mendes@gmail.com",
+      "birthday": "1991-09-25T00:00:00.000Z",
+      "admin": false,
+      "group": "work"
+    },
+    {
+      "id": "a2b3c4d5-e6f7-8a9b-0c1d-2e3f4a5b6c7d",
+      "name": "Lucas Pereira",
+      "email": "lucas.pereira@gmail.com",
+      "birthday": "1989-05-14T00:00:00.000Z",
+      "admin": true
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
+      "name": "Camila Rocha",
+      "email": "camila.rocha@gmail.com",
+      "birthday": "1994-12-02T00:00:00.000Z",
+      "admin": false,
+      "group": "friends"
+    },
+    {
+      "id": "c2d3e4f5-a6b7-8c9d-0e1f-2a3b4c5d6e7f",
+      "name": "Thiago Martins",
+      "email": "thiago.martins@gmail.com",
+      "birthday": "1986-03-10T00:00:00.000Z",
+      "admin": true
+    },
+    {
+      "id": "d2e3f4a5-b6c7-8d9e-0f1a-2b3c4d5e6f7a",
+      "name": "Larissa Carvalho",
+      "email": "larissa.carvalho@gmail.com",
+      "birthday": "1990-06-22T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "e2f3a4b5-c6d7-8e9f-0a1b-2c3d4e5f6a7b",
+      "name": "Ricardo Gomes",
+      "email": "ricardo.gomes@gmail.com",
+      "birthday": "1992-10-08T00:00:00.000Z",
+      "admin": true,
+      "group": "work"
+    },
+    {
+      "id": "f3a4b5c6-d7e8-9f0a-1b2c-3d4e5f6a7b8c",
+      "name": "Aline Ferreira",
+      "email": "aline.ferreira@gmail.com",
+      "birthday": "1996-08-28T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d",
+      "name": "Diego Nascimento",
+      "email": "diego.nascimento@gmail.com",
+      "birthday": "1984-01-09T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "b3c4d5e6-f7a8-9b0c-1d2e-3f4a5b6c7d8e",
+      "name": "Vanessa Ribeiro",
+      "email": "vanessa.ribeiro@gmail.com",
+      "birthday": "1988-09-17T00:00:00.000Z",
+      "admin": true,
+      "group": "family"
+    },
+    {
+      "id": "c4d5e6f7-a8b9-0c1d-2e3f-4a5b6c7d8e9f",
+      "name": "Felipe Araújo",
+      "email": "felipe.araujo@gmail.com",
+      "birthday": "1993-11-26T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a",
+      "name": "Isabela Teixeira",
+      "email": "isabela.teixeira@gmail.com",
+      "birthday": "1991-02-14T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "e4f5a6b7-c8d9-0e1f-2a3b-4c5d6e7f8a9b",
+      "name": "Marcelo Barros",
+      "email": "marcelo.barros@gmail.com",
+      "birthday": "1987-07-07T00:00:00.000Z",
+      "admin": true
+    },
+    {
+      "id": "f4a5b6c7-d8e9-0f1a-2b3c-4d5e6f7a8b9c",
+      "name": "Tatiane Moraes",
+      "email": "tatiane.moraes@gmail.com",
+      "birthday": "1995-05-21T00:00:00.000Z",
+      "admin": false,
+      "group": "friends"
+    },
+    {
+      "id": "a4b5c6d7-e8f9-0a1b-2c3d-4e5f6a7b8c9d",
+      "name": "Eduardo Castro",
+      "email": "eduardo.castro@gmail.com",
+      "birthday": "1989-12-18T00:00:00.000Z",
+      "admin": true
+    },
+    {
+      "id": "b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e",
+      "name": "Renata Pires",
+      "email": "renata.pires@gmail.com",
+      "birthday": "1994-03-04T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f",
+      "name": "André Melo",
+      "email": "andre.melo@gmail.com",
+      "birthday": "1986-06-27T00:00:00.000Z",
+      "admin": true,
+      "group": "work"
+    },
+    {
+      "id": "d5e6f7a8-b9c0-1d2e-3f4a-5b6c7d8e9f0a",
+      "name": "Letícia Fernandes",
+      "email": "leticia.fernandes@gmail.com",
+      "birthday": "1992-10-31T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b",
+      "name": "Rodrigo Lima",
+      "email": "rodrigo.lima@gmail.com",
+      "birthday": "1990-08-23T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "f5a6b7c8-d9e0-1f2a-3b4c-5d6e7f8a9b0c",
+      "name": "Débora Cardoso",
+      "email": "debora.cardoso@gmail.com",
+      "birthday": "1996-12-29T00:00:00.000Z",
+      "admin": true,
+      "group": "family"
+    },
+    {
+      "id": "a5b6c7d8-e9f0-1a2b-3c4d-5e6f7a8b9c0d",
+      "name": "Gabriel Duarte",
+      "email": "gabriel.duarte@gmail.com",
+      "birthday": "1988-04-03T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "b5c6d7e8-f9a0-1b2c-3d4e-5f6a7b8c9d0e",
+      "name": "Sabrina Correia",
+      "email": "sabrina.correia@gmail.com",
+      "birthday": "1993-09-12T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "c6d7e8f9-a0b1-2c3d-4e5f-6a7b8c9d0e1f",
+      "name": "Pedro Henrique",
+      "email": "pedro.henrique@gmail.com",
+      "birthday": "1991-01-07T00:00:00.000Z",
+      "admin": true,
+      "group": "friends"
+    },
+    {
+      "id": "d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a",
+      "name": "Bianca Silva",
+      "email": "bianca.silva@gmail.com",
+      "birthday": "1987-07-19T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "e6f7a8b9-c0d1-2e3f-4a5b-6c7d8e9f0a1b",
+      "name": "Gustavo Nogueira",
+      "email": "gustavo.nogueira@gmail.com",
+      "birthday": "1985-11-15T00:00:00.000Z",
+      "admin": true
+    },
+    {
+      "id": "f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c",
+      "name": "Carolina Brito",
+      "email": "carolina.brito@gmail.com",
+      "birthday": "1992-02-28T00:00:00.000Z",
+      "admin": false,
+      "group": "work"
+    },
+    {
+      "id": "a6b7c8d9-e0f1-2a3b-4c5d-6e7f8a9b0c1d",
+      "name": "Leandro Batista",
+      "email": "leandro.batista@gmail.com",
+      "birthday": "1990-06-02T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "b6c7d8e9-f0a1-2b3c-4d5e-6f7a8b9c0d1e",
+      "name": "Natália Moura",
+      "email": "natalia.moura@gmail.com",
+      "birthday": "1994-05-27T00:00:00.000Z",
+      "admin": true
+    },
+    {
+      "id": "c7d8e9f0-a1b2-3c4d-5e6f-7a8b9c0d1e2f",
+      "name": "Maurício Farias",
+      "email": "mauricio.farias@gmail.com",
+      "birthday": "1986-03-13T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "d7e8f9a0-b1c2-3d4e-5f6a-7b8c9d0e1f2a",
+      "name": "Elaine Prado",
+      "email": "elaine.prado@gmail.com",
+      "birthday": "1991-09-09T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b",
+      "name": "Vinícius Rezende",
+      "email": "vinicius.rezende@gmail.com",
+      "birthday": "1989-12-20T00:00:00.000Z",
+      "admin": true,
+      "group": "friends"
+    },
+    {
+      "id": "f7a8b9c0-d1e2-3f4a-5b6c-7d8e9f0a1b2c",
+      "name": "Mariana Torres",
+      "email": "mariana.torres@gmail.com",
+      "birthday": "1995-07-01T00:00:00.000Z",
+      "admin": false
+    },
+    {
+      "id": "a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d",
+      "name": "Alexandre Ramos",
+      "email": "alexandre.ramos@gmail.com",
+      "birthday": "1988-10-24T00:00:00.000Z",
+      "admin": true
+    },
+    {
+      "id": "b7c8d9e0-f1a2-3b4c-5d6e-7f8a9b0c1d2e",
+      "name": "Simone Tavares",
+      "email": "simone.tavares@gmail.com",
+      "birthday": "1993-06-16T00:00:00.000Z",
+      "admin": false,
+      "group": "work"
+    },
+    {
+      "id": "c8d9e0f1-a2b3-4c5d-6e7f-8a9b0c1d2e3f",
+      "name": "Henrique Cunha",
+      "email": "henrique.cunha@gmail.com",
+      "birthday": "1987-04-08T00:00:00.000Z",
+      "admin": false
+    }
+  ]
+}
