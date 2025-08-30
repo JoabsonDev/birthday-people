@@ -1,7 +1,5 @@
 document.querySelectorAll(".swiper-slide").forEach((el) => {
   el.addEventListener("scroll", function () {
-    console.log("scrolling");
-
     const header = document.querySelector(".l-header");
 
     if (this.scrollTop > 24) {

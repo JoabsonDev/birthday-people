@@ -1,6 +1,7 @@
 import { formatDateBr } from "./helpers/formate-date-br.js";
 
-const buildBirthdayTable = (home, data) => {
+const buildBirthdayTable = (data) => {
+  const home = document.querySelector("#home");
   home.querySelector(".l-birthday-table")?.remove();
 
   const birthdayListTable = document.createElement("table");
@@ -60,12 +61,24 @@ const buildBirthdayTable = (home, data) => {
   });
 };
 
+export const buildGroupsFilter = (data) => {
+  const selectGroups = document.querySelector("#groups");
+  selectGroups.innerHTML = `
+  <option value="">todos</option>
+  `;
+  data.forEach((group) => {
+    const option = document.createElement("option");
+    option.value = group;
+    option.textContent = group;
+    selectGroups.appendChild(option);
+  });
+};
+
 const buildPagination = (pagination) => {
   console.log(pagination);
 };
 
 export const buildHomePage = ({ data, ...pagination }) => {
-  const home = document.querySelector("#home");
-  buildBirthdayTable(home, data);
+  buildBirthdayTable(data);
   buildPagination(pagination);
 };

@@ -34,4 +34,14 @@ pageSize.addEventListener("change", (event) => {
   observable.notify();
 });
 
+const selectGroups = document.querySelector("#groups");
+selectGroups.addEventListener("change", (event) => {
+  const group = event.target.value;
+  filterControl.setFilters({
+    ...filterControl.getFilters(),
+    group,
+  });
+  observable.notify();
+});
+
 export { filterControl };
