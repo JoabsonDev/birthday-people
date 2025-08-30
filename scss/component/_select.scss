@@ -30,4 +30,9 @@ $class: ".c-select";
     box-shadow: 0 0 0 3px rgba(115, 103, 240, 0.2);
     outline: none;
   }
+
+  option[disabled] {
+    color: #b9b9c3;
+    background-color: #f5f5f5;
+  }
 }

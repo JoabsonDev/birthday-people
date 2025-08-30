@@ -74,6 +74,24 @@ export const buildGroupsFilter = (data) => {
   });
 };
 
+export const buildMonthFilter = (data) => {
+  const selectMonth = document.querySelector("#months");
+  selectMonth.innerHTML = `
+    <option value="">todos</option>
+  `;
+
+  data.forEach((item) => {
+    const [month, enabled] = Object.entries(item)[0];
+
+    const option = document.createElement("option");
+    option.value = month;
+    option.textContent = month;
+    option.disabled = !enabled;
+
+    selectMonth.appendChild(option);
+  });
+};
+
 const buildPagination = (pagination) => {
   console.log(pagination);
 };

@@ -1,3 +1,5 @@
+import { MONTH_NAMES } from "../constants/month-names.js";
+
 const BASE_URL = "http://localhost:3000";
 
 async function getBirthdayList({
@@ -5,12 +7,18 @@ async function getBirthdayList({
   perPage = 10,
   search = "",
   group = "",
+  month = "",
 }) {
+  console.log(month);
+
   const query = new URLSearchParams({
     _page: page,
     _limit: perPage,
     ...(search ? { name_like: search } : {}),
     ...(group ? { group_like: group } : {}),
+    ...(month !== ""
+      ? { birthday_like: `-${String(month + 1).padStart(2, "0")}-` }
+      : {}),
   });
 
   const res = await fetch(`${BASE_URL}/birthdays?${query.toString()}`);
@@ -39,7 +47,23 @@ export async function getGroups() {
   return groups;
 }
 
+export async function getMonths() {
+  const res = await fetch(`${BASE_URL}/birthdays`);
+  const data = await res.json();
+
+  const monthsFound = new Set(
+    data.map((item) => new Date(item.birthday).getMonth())
+  );
+
+  const months = MONTH_NAMES.map((name, idx) => ({
+    [name]: monthsFound.has(idx),
+  }));
+
+  return months;
+}
+
 export const BirthdayService = () => ({
   getBirthdayList,
   getGroups,
+  getMonths,
 });

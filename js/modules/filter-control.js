@@ -1,3 +1,4 @@
+import { MONTH_NAMES } from "./constants/month-names.js";
 import { observable } from "./observable.js";
 
 const FilterControl = () => {
@@ -40,6 +41,19 @@ selectGroups.addEventListener("change", (event) => {
   filterControl.setFilters({
     ...filterControl.getFilters(),
     group,
+  });
+  observable.notify();
+});
+
+const selectMonths = document.querySelector("#months");
+selectMonths.addEventListener("change", (event) => {
+  const monthIndex = MONTH_NAMES.findIndex(
+    (m) => m.toLowerCase() === event.target.value.toLowerCase()
+  );
+
+  filterControl.setFilters({
+    ...filterControl.getFilters(),
+    month: monthIndex >= 0 ? monthIndex : "",
   });
   observable.notify();
 });

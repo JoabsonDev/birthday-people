@@ -1,4 +1,7 @@
-import { buildGroupsFilter } from "./modules/build-home-page.js";
+import {
+  buildGroupsFilter,
+  buildMonthFilter,
+} from "./modules/build-home-page.js";
 import { fetchBirthdayList } from "./modules/fetch-birthday-list.js";
 import { observable } from "./modules/observable.js";
 import "./modules/scroll-header.js";
@@ -13,4 +16,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   observable.notify();
 
   birthdayService.getGroups().then(buildGroupsFilter);
+  birthdayService.getMonths().then(buildMonthFilter);
 });

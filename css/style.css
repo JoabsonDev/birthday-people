@@ -177,6 +177,10 @@ body {
   box-shadow: 0 0 0 3px rgba(115, 103, 240, 0.2);
   outline: none;
 }
+.c-select option[disabled] {
+  color: #b9b9c3;
+  background-color: #f5f5f5;
+}
 
 .l-container {
   max-width: 1366px;
