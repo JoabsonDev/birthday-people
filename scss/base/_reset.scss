@@ -48,7 +48,7 @@ a {
 /* Evita zoom no duplo clique em iOS */
 body {
   touch-action: manipulation;
-  padding-top: 84px;
+  padding-top: 59px;
 }
 
 /* Seleção de texto mais suave */
@@ -58,10 +58,10 @@ body {
 
 /* Ajuste do tamanho do swiper */
 main.swiper {
-  height: calc(100dvh - 84px);
+  height: calc(100dvh - 59px);
 
   .swiper-slide {
-    padding-bottom: 94px;
+    padding-block: 24px 94px;
     overflow-x: auto;
   }
 }
@@ -73,4 +73,15 @@ button {
 /* Tamanho de font default ph-duotone */
 *.ph-duotone {
   font-size: 22px;
+}
+
+/* Oculta a barra de rolagem */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  -ms-overflow-style: none; /* IE e Edge */
+  scrollbar-width: none; /* Firefox */
 }

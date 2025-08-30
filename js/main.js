@@ -1,14 +1,10 @@
-import { buildHomePage } from "./modules/build-birthday-table.js";
-import "./modules/header.js";
-import "./modules/select.js";
-import { BirthdayService } from "./modules/services/birthday-service.js";
+import { fetchBirthdayList } from "./modules/fetch-birthday-list.js";
+import { observable } from "./modules/observable.js";
+import "./modules/scroll-header.js";
 import "./modules/swiper-config.js";
 
-const birthdayService = BirthdayService();
+observable.subscribe(fetchBirthdayList);
 
-birthdayService
-  .getBirthdayList({ page: 1, perPage: 10, search: "" })
-  .then(buildHomePage)
-  .catch((error) => {
-    console.error(error);
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  observable.notify();
+});

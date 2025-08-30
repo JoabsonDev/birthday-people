@@ -1,6 +1,8 @@
 import { formatDateBr } from "./helpers/formate-date-br.js";
 
 const buildBirthdayTable = (home, data) => {
+  home.querySelector("table")?.remove();
+
   const birthdayListTable = document.createElement("table");
   birthdayListTable.setAttribute("aria-describedby", "table-description");
   birthdayListTable.classList.add("l-birthday-table");
@@ -63,7 +65,7 @@ const buildPagination = (pagination) => {
 };
 
 export const buildHomePage = ({ data, ...pagination }) => {
-  // const home = document.querySelector("#home");
-  // buildBirthdayTable(home, data);
-  // buildPagination(pagination);
+  const home = document.querySelector("#home");
+  buildBirthdayTable(home, data);
+  buildPagination(pagination);
 };
