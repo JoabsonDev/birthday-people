@@ -24,4 +24,14 @@ searchInput.addEventListener("input", (event) => {
   observable.notify();
 });
 
+const pageSize = document.querySelector("#page-size");
+pageSize.addEventListener("change", (event) => {
+  const perPage = Number(event.target.value);
+  filterControl.setFilters({
+    ...filterControl.getFilters(),
+    perPage,
+  });
+  observable.notify();
+});
+
 export { filterControl };

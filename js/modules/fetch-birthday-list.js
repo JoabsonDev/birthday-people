@@ -1,4 +1,4 @@
-import { buildHomePage } from "./build-birthday-table.js";
+import { buildHomePage } from "./build-home-page.js";
 import { filterControl } from "./filter-control.js";
 import { BirthdayService } from "./services/birthday-service.js";
 
