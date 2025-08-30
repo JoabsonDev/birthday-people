@@ -15,14 +15,20 @@ const FilterControl = () => {
 const filterControl = FilterControl();
 
 const searchInput = document.querySelector("#search");
+let debounceTimeout;
 searchInput.addEventListener("input", (event) => {
   const search = event.target.value;
-  filterControl.setFilters({
-    ...filterControl.getFilters(),
-    search,
-    page: 1,
-  });
-  observable.notify();
+
+  clearTimeout(debounceTimeout);
+
+  debounceTimeout = setTimeout(() => {
+    filterControl.setFilters({
+      ...filterControl.getFilters(),
+      search,
+      page: 1,
+    });
+    observable.notify();
+  }, 500);
 });
 
 const pageSize = document.querySelector("#page-size");
