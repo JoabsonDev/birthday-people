@@ -44,5 +44,13 @@ $class: ".c-pagination";
         border: 1px solid #163177;
       }
     }
+
+    &:has(.fa-solid) {
+      padding: 3px;
+
+      .fa-solid {
+        pointer-events: none;
+      }
+    }
   }
 }

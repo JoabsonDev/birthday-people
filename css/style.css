@@ -380,5 +380,11 @@ body {
   background-color: #1e90ff;
   border: 1px solid #163177;
 }
+.c-pagination__link:has(.fa-solid) {
+  padding: 3px;
+}
+.c-pagination__link:has(.fa-solid) .fa-solid {
+  pointer-events: none;
+}
 
 /*# sourceMappingURL=style.css.map */

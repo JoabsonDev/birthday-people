@@ -35,6 +35,7 @@ async function getBirthdayList({
     last: totalPages,
     pages: totalPages,
     items: totalItems,
+    current: page,
   };
 }
 
