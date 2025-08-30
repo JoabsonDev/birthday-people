@@ -1,7 +1,7 @@
 import { formatDateBr } from "./helpers/formate-date-br.js";
 
 const buildBirthdayTable = (home, data) => {
-  home.querySelector("table")?.remove();
+  home.querySelector(".l-birthday-table")?.remove();
 
   const birthdayListTable = document.createElement("table");
   birthdayListTable.setAttribute("aria-describedby", "table-description");
