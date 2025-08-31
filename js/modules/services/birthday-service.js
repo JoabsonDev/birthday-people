@@ -1,6 +1,10 @@
-import { MONTH_NAMES } from "../constants/month-names.js";
+// const BASE_URL = "http://localhost:3000"; // json-server
+const BASE_URL = "http://localhost:3333"; // NestJS
 
-const BASE_URL = "http://localhost:3000";
+function getAuthHeaders() {
+  const token = localStorage.getItem("access_token");
+  return token ? { Authorization: `Bearer ${token}` } : {};
+}
 
 async function getBirthdayList({
   page = 1,
@@ -9,8 +13,6 @@ async function getBirthdayList({
   group = "",
   month = "",
 }) {
-  console.log(month);
-
   const query = new URLSearchParams({
     _page: page,
     _limit: perPage,
@@ -21,9 +23,14 @@ async function getBirthdayList({
       : {}),
   });
 
-  const res = await fetch(`${BASE_URL}/birthdays?${query.toString()}`);
-  const data = await res.json();
+  const res = await fetch(`${BASE_URL}/users?${query.toString()}`, {
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(),
+    },
+  });
 
+  const data = await res.json();
   const totalItems = parseInt(res.headers.get("X-Total-Count") || "0", 10);
   const totalPages = Math.ceil(totalItems / perPage);
 
@@ -40,27 +47,20 @@ async function getBirthdayList({
 }
 
 export async function getGroups() {
-  const res = await fetch(`${BASE_URL}/birthdays`);
+  const res = await fetch(`${BASE_URL}/birthdays/groups`, {
+    headers: getAuthHeaders(),
+  });
   const data = await res.json();
-
-  const groups = [...new Set(data.map((item) => item.group).filter(Boolean))];
-
-  return groups;
+  return data;
 }
 
 export async function getMonths() {
-  const res = await fetch(`${BASE_URL}/birthdays`);
+  const res = await fetch(`${BASE_URL}/birthdays/months`, {
+    headers: getAuthHeaders(),
+  });
   const data = await res.json();
 
-  const monthsFound = new Set(
-    data.map((item) => new Date(item.birthday).getMonth())
-  );
-
-  const months = MONTH_NAMES.map((name, idx) => ({
-    [name]: monthsFound.has(idx),
-  }));
-
-  return months;
+  return data;
 }
 
 export const BirthdayService = () => ({
