@@ -1,10 +1,5 @@
-// const BASE_URL = "http://localhost:3000"; // json-server
-const BASE_URL = "http://localhost:3333"; // NestJS
-
-function getAuthHeaders() {
-  const token = localStorage.getItem("access_token");
-  return token ? { Authorization: `Bearer ${token}` } : {};
-}
+import { BASE_URL } from "../constants/base-url.js";
+import { getAuthHeaders } from "../helpers/get-auth-headers.js";
 
 async function getBirthdayList({
   page = 1,
