@@ -38,6 +38,7 @@ async function initializeApp() {
     // Se o erro for 401, redireciona para login
     if (error?.status === 401) {
       console.warn("Sessão expirada. Redirecionando para login...");
+      localStorage.removeItem("access_token");
       location.href = "/login.html";
     } else {
       console.error("Erro ao inicializar a página:", error);
