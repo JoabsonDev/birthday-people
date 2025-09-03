@@ -1,4 +1,5 @@
 import { BASE_URL } from "./constants/base-url.js";
+import { showToast } from "./show-toasty.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.querySelector("#register-form");
@@ -21,10 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         await res.json();
-        console.log("Usuário cadastrado com sucesso!");
+        showToast("Usuário cadastrado com sucesso!", "success");
 
         location.href = "/login.html";
       } catch (error) {
+        showToast("Erro ao se cadastrar. Tente novamente!", "error");
         console.error("Erro ao se cadastrar:", error);
       }
     });

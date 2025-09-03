@@ -1,4 +1,5 @@
 import { BASE_URL } from "./constants/base-url.js";
+import { showToast } from "./show-toasty.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("#login-form");
@@ -22,11 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data.access_token) {
           localStorage.setItem("access_token", data.access_token);
 
+          showToast("Login efetuado com sucesso!", "success");
+
           location.href = "/";
         } else {
+          showToast("Erro ao se autenticar. Tente novamente!", "error");
           console.warn("Nenhum access_token retornado pela API.");
         }
       } catch (error) {
+        showToast("Erro ao se autenticar. Tente novamente!", "error");
         console.error("Erro ao se autenticar:", error);
       }
     });
