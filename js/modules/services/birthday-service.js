@@ -1,16 +1,31 @@
-const BASE_URL = "http://localhost:3000";
+import { BASE_URL } from "../constants/base-url.js";
+import { getAuthHeaders } from "../helpers/get-auth-headers.js";
 
-async function getBirthdayList({ page = 1, perPage = 10, search = "" }) {
+async function getBirthdayList({
+  page = 1,
+  perPage = 10,
+  search = "",
+  group = "",
+  month = "",
+}) {
   const query = new URLSearchParams({
     _page: page,
     _limit: perPage,
     ...(search ? { name_like: search } : {}),
+    ...(group ? { group_like: group } : {}),
+    ...(month !== ""
+      ? { birthday_like: `-${String(month + 1).padStart(2, "0")}-` }
+      : {}),
   });
 
-  const res = await fetch(`${BASE_URL}/birthdays?${query.toString()}`);
-  const data = await res.json();
+  const res = await fetch(`${BASE_URL}/users?${query.toString()}`, {
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(),
+    },
+  });
 
-  // pega total de registros
+  const data = await res.json();
   const totalItems = parseInt(res.headers.get("X-Total-Count") || "0", 10);
   const totalPages = Math.ceil(totalItems / perPage);
 
@@ -22,9 +37,29 @@ async function getBirthdayList({ page = 1, perPage = 10, search = "" }) {
     last: totalPages,
     pages: totalPages,
     items: totalItems,
+    current: page,
   };
+}
+
+export async function getGroups() {
+  const res = await fetch(`${BASE_URL}/birthdays/groups`, {
+    headers: getAuthHeaders(),
+  });
+  const data = await res.json();
+  return data;
+}
+
+export async function getMonths() {
+  const res = await fetch(`${BASE_URL}/birthdays/months`, {
+    headers: getAuthHeaders(),
+  });
+  const data = await res.json();
+
+  return data;
 }
 
 export const BirthdayService = () => ({
   getBirthdayList,
+  getGroups,
+  getMonths,
 });
