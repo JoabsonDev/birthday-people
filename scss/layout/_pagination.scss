@@ -1,4 +1,4 @@
-$class: ".pagination";
+$class: ".c-pagination";
 
 #{$class} {
   display: flex;
@@ -6,32 +6,51 @@ $class: ".pagination";
   gap: 8px;
   padding: 12px;
   margin-top: 10px;
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 700;
 
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+  }
+
   &__link {
+    $link: &;
     text-decoration: none;
-    color: #5F6C80;
-    background-color: #DDD9D9;
-    border: 1px solid #DDD9D9;
+    color: #5f6c80;
+    background-color: #ddd9d9;
+    border: 1px solid #ddd9d9;
     padding: 3px 8px;
     border-radius: 5px;
     transition: all 0.3s ease;
+    cursor: pointer;
 
     &--disabled {
-      pointer-events: none;  
-      color: #999;           
-      border-color: #ccc;
+      color: #999 !important;
+      border-color: #ccc !important;
       cursor: not-allowed;
+      pointer-events: none;
     }
 
-    &:active {
-      color: #FFFFFF;
-      background-color: #1E90FF;
-      border: 1px solid #163177;
+    &:not(.c-pagination__link--disabled) {
+      &.c-pagination__link--active,
+      &:hover {
+        color: #ffffff;
+        background-color: #1e90ff;
+        border: 1px solid #163177;
+      }
+    }
+
+    &:has(.fa-solid) {
+      padding: 3px;
+
+      .fa-solid {
+        pointer-events: none;
+      }
     }
   }
 }
