@@ -26,7 +26,6 @@ html,
 body {
   -webkit-text-size-adjust: 100%; /* evita zoom automático no iOS */
   font-family: "Roboto", sans-serif;
-
   height: 100%;
 }
 
@@ -48,7 +47,7 @@ a {
 /* Evita zoom no duplo clique em iOS */
 body {
   touch-action: manipulation;
-  padding-top: 84px;
+  padding-top: 70px;
 }
 
 /* Seleção de texto mais suave */

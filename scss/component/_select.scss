@@ -5,7 +5,7 @@ $class: ".c-select";
   width: fit-content;
   font-family: "Inter", Arial, sans-serif;
   font-size: 14px;
-  color: #333;
+  color: var(--color-secondary-900);
 
   &:has(button:focus-visible) {
     outline: -webkit-focus-ring-color auto 1px;
@@ -17,17 +17,19 @@ $class: ".c-select";
     justify-content: space-between;
     align-items: center;
     padding: 10px 12px;
+    margin: 0 0 10px 0;
     gap: 4px;
-    border: 1px solid #dcdcdc;
+    font-weight: 700;
+    border: 1px solid var(--color-secondary-700);
     border-radius: 8px;
-    background: #fff;
+    background: var(--color-secondary-300);
     cursor: pointer;
     transition: 0.3s all;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     min-width: max-content;
 
     &:hover {
-      border-color: #b3b3b3;
+      border-color: var(--color-secondary-600);
     }
 
     & .c-select__picker-icon {
@@ -43,8 +45,8 @@ $class: ".c-select";
     top: 100%;
     left: 0;
     width: 100%;
-    background: #fff;
-    border: 1px solid #dcdcdc;
+    background: var(--color-secondary-100);
+    border: 1px solid var(--color-secondary-300);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin-top: 4px;
@@ -68,7 +70,7 @@ $class: ".c-select";
       white-space: nowrap;
 
       &--focused {
-        background: #d0e6ff;
+        background: var(--color-secondary-200);
       }
 
       &:hover {
@@ -82,7 +84,7 @@ $class: ".c-select";
       &--selected::after {
         content: "✓";
         margin-right: 8px;
-        color: #1a73e8; // cor do check como o Vuexy
+        color: var(--color-secondary-600); // cor do check como o Vuexy
       }
     }
   }
