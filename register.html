@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth | Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/modules/auth-register.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="l-container">
+      <div class="auth-form auth-form--register">
+        <form class="auth-form__container" id="register-form">
+          <h2 class="auth-form__title">Cadastro</h2>
+
+          <!-- name -->
+          <div class="auth-form__field">
+            <label for="name" class="auth-form__label">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="auth-form__input"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+
+          <!-- email -->
+          <div class="auth-form__field">
+            <label for="email" class="auth-form__label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="auth-form__input"
+              placeholder="Digite seu email"
+              required
+            />
+          </div>
+
+          <!-- password -->
+          <div class="auth-form__field">
+            <label for="password" class="auth-form__label">Senha</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="auth-form__input"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+
+          <!-- birthday -->
+          <div class="auth-form__field">
+            <label for="birthday" class="auth-form__label"
+              >Data de nascimento</label
+            >
+            <input
+              type="date"
+              id="birthday"
+              name="birthday"
+              class="auth-form__input"
+              required
+            />
+          </div>
+
+          <!-- submit -->
+          <button type="submit" class="auth-form__button">Cadastrar</button>
+
+          <p class="auth-form__switch">
+            Já tem conta?
+            <a href="/login.html" class="auth-form__link">Entre aqui</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+  </body>
+</html>
