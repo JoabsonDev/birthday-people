@@ -1,4 +1,5 @@
 import { BASE_URL } from "../constants/base-url.js";
+import { apiFetch } from "../helpers/api-fetch.js";
 import { getAuthHeaders } from "../helpers/get-auth-headers.js";
 
 async function getBirthdayList({
@@ -18,7 +19,7 @@ async function getBirthdayList({
       : {}),
   });
 
-  const res = await fetch(`${BASE_URL}/users?${query.toString()}`, {
+  const res = await apiFetch(`${BASE_URL}/users?${query.toString()}`, {
     headers: {
       "Content-Type": "application/json",
       ...getAuthHeaders(),
@@ -42,7 +43,7 @@ async function getBirthdayList({
 }
 
 export async function getGroups() {
-  const res = await fetch(`${BASE_URL}/birthdays/groups`, {
+  const res = await apiFetch(`${BASE_URL}/birthdays/groups`, {
     headers: getAuthHeaders(),
   });
   const data = await res.json();
@@ -50,7 +51,7 @@ export async function getGroups() {
 }
 
 export async function getMonths() {
-  const res = await fetch(`${BASE_URL}/birthdays/months`, {
+  const res = await apiFetch(`${BASE_URL}/birthdays/months`, {
     headers: getAuthHeaders(),
   });
   const data = await res.json();
