@@ -46,7 +46,7 @@ $class: ".c-bottom-navigation";
     }
 
     span {
-      color: #0e276e;
+      color: var(--color-primary-700);
     }
 
     &--active {
@@ -69,14 +69,14 @@ $class: ".c-bottom-navigation";
         color: gold;
       }
       i.ph-house::before {
-        color: #1e90ff;
+        color: var(--color-primary-300);
       }
       i.ph-user-circle::before {
         color: #32cd32;
       }
 
       i::after {
-        color: #0e276e;
+        color: var(--color-primary-700);
       }
     }
   }

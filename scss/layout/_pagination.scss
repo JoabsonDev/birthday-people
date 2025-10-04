@@ -21,17 +21,18 @@ $class: ".c-pagination";
   &__link {
     $link: &;
     text-decoration: none;
-    color: #5f6c80;
-    background-color: #ddd9d9;
-    border: 1px solid #ddd9d9;
+    color: var(--color-primary-300);
+    background-color: var(--color-primary-100);
+    border: 1px solid var(var(--color-primary-200));
     padding: 3px 8px;
     border-radius: 5px;
     transition: all 0.3s ease;
     cursor: pointer;
 
     &--disabled {
-      color: #999 !important;
-      border-color: #ccc !important;
+      color: var(--color-disabled-text) !important;      
+      background-color: var(--color-disabled-bg);       
+      border: 2px solid var(--color-disabled-border) !important;
       cursor: not-allowed;
       pointer-events: none;
     }
@@ -40,8 +41,8 @@ $class: ".c-pagination";
       &.c-pagination__link--active,
       &:hover {
         color: #ffffff;
-        background-color: #1e90ff;
-        border: 1px solid #163177;
+        background-color: var(--color-primary-300);
+        border: 1px solid var(--box-color-border);
       }
     }
 

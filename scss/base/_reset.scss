@@ -25,10 +25,10 @@ html {
 html,
 body {
   -webkit-text-size-adjust: 100%; /* evita zoom automático no iOS */
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family-roboto);
 
   height: 100%;
-  background-color: #eee;
+  background-color: var(--bg-light);
 }
 
 /* Remove borda azul ao tocar em inputs/botões no mobile */
